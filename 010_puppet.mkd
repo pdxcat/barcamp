@@ -6,3 +6,4 @@
 * In Puppet configuration IS Code
 * Distinguishes self from competitors such as Chef by the
   Directed Asyncronous Graph (DAG)
+* Production setups typically use a client-server model
