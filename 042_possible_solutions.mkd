@@ -1,0 +1,13 @@
+# Possible Solutions
+
+## Set up a shared test puppetmaster
+
+Why don't we just set up a second puppetmaster server, call it
+the test server, and be done with it?
+
+* Doesn't actually address fully the testing workflow problem
+* Does mean our developers could (if we fleshed this idea out
+  more) push their code to the test server to test their
+  code
+* One test server, n developers working on m projects... Hmm.
+* This is not a bad idea, but it's not yet complete.

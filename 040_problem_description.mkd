@@ -16,3 +16,4 @@
 * We want our developers to have the same (or similar)
   flexibility with testing that they have with git
   branching
+* Side note: testing in production is Bad (TM)
