@@ -1,0 +1,19 @@
+# Testing
+
+* How to test your code? Spec tests -> Good.
+* Eventually however, you must test on a box.
+
+* Lets revisit the MODULEPATH and MANIFESTPATH variables:
+
+  ENVIRONMENT=production
+  MODULEPATH=/etc/puppet/environments/$ENVIRONMENT/modules
+  MANIFESTS=/etc/puppet/environments/$ENVIRONMENT/manifests
+
+* Now every folder under /etc/puppet/environment/ is a perfectly vaild puppet environment
+  with its own modulepath and manifests.
+
+* Puppet environments can be accessed on a client by execing
+
+    puppet agent --test --environment=test_nibz_fix_something
+
+

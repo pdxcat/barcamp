@@ -1,3 +1,16 @@
-2. Git
-    * Decentralized revision control system
-    * Power add-on and automation made easy via hooks
+# Git
+
+* Decentralized revision control system
+* Power add-on and automation made easy via hooks
+* post-receive hook is run on the git server after
+  a successful push is completed
+
+## Git Branches
+
+* Git gurus can talk more about what a branch means,
+  we mostly just care about how it works
+* Reference for a tree of commits
+* Git philosophy is branch early, branch often
+* Workflow typically dictates creating a feature
+  branch when working on something new, to be merged
+  back into Master when finished and tested

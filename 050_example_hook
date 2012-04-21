@@ -1,0 +1,27 @@
+# Our First Git Hook
+
+    #!/bin/sh
+    read oldrev newrev refname
+
+    REPO="git@gitolite.cat.pdx.edu:puppet-environments.git"
+    BRANCH=`echo $refname | sed -n 's/^refs\/heads\///p'`
+    BRANCH_DIR="/etc/puppet/environments"
+    SSH_ARGS="-i /var/lib/puppet/.ssh/id_rsa"
+    SSH_DEST="puppet@puppetmaster.cat.pdx.edu"
+
+    if [ "$newrev" -eq 0 ] 2> /dev/null ; then
+      # branch is being deleted
+      echo "Deleting remote branch $BRANCH_DIR/$BRANCH"
+      ssh $SSH_ARGS $SSH_DEST /bin/sh <<-EOF
+        cd $BRANCH_DIR && rm -rf $BRANCH
+    EOF
+    else
+      # branch is being updated
+      echo "Updating remote branch $BRANCH_DIR/$BRANCH"
+      ssh  $SSH_ARGS $SSH_DEST /bin/sh <<-EOF
+        { cd $BRANCH_DIR/$BRANCH && git pull origin $BRANCH ; } \
+        || { mkdir -p $BRANCH_DIR && cd $BRANCH_DIR \
+             && git clone $REPO $BRANCH && cd $BRANCH \
+             && git checkout -b $BRANCH origin/$BRANCH ; }
+    EOF
+    fi

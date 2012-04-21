@@ -1,0 +1,21 @@
+# Deployment
+
+* Need to be able to push out changes without for i in {allmyboxes}: do ssh..
+* Solved with puppet master/git integration
+* Puppet.conf written to have MODULEPATH and MANIFESTPATH in a directory under git
+
+    MODULEPATH=/etc/puppet/environments/production/modules
+    MANIFESTPATH=/etc/puppet/environment/production/manifests
+
+* Git server (not necessarily the puppet master) has a post recive hook that:
+  
+    ssh $puppetmaster '\
+      cd /etc/puppet/environmens/production;\
+      git fetch;\
+      git reset --hard HEAD'
+
+* This ensures that the modules and manifests currently on the puppet master 
+  are updated and in sync.
+    
+    
+

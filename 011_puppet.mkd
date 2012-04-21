@@ -1,3 +1,27 @@
-011. Puppet at 1,000 ft
+# Puppet at 1,000 ft
 
-     o
+## A Puppet Configuration
+
+Puppet configuration consists of:
+
+* A puppet.conf file which specifies basic configuration
+  paths and values
+* A site.pp or other initilizing manifest
+* A modulepath, which is a directory containing modules
+* Modules
+
+## Modules
+
+* Related set of configuration files layed out according to
+  a convention
+* Currently optional, will be the only way to lay out
+  configuration in the next Puppet release (2.8)
+
+## Puppet Environment
+
+* A variable available at the time puppet.conf is parsed
+  which can affect the assignment of the modulepath and
+  manifest variables
+* Conceptually similar to Ruby on Rails environents
+* Environments can run completely different sets of modules
+  and manifests - they do not need to be related

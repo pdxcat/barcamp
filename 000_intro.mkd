@@ -1,6 +1,9 @@
-# Puppet Introduction
-    * Configuration Management/Orchestration
-    * Open Source, very Enterprise
-    * Based in Portland, OR
-    * Near and dear to our hearts
+# Who are we
 
+* Computer Action Team(CAT)
+* Portland State University Masseh College of Engineering and Computer Science 
+* Sysadmins
+* marut, blkperl, nibalizer on irc.freenode.org / irc.cat.pdx.edu
+* marut@cat.pdx.edu, blkperl@cat.pdx.edu, nibz@cat.pdx.edu
+* unix@cat.pdx.edu (this might actually not work)
+* https://github.com/pdxcat

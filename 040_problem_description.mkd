@@ -1,3 +1,18 @@
-What is our Problem?
-  * Testing
-  * Deployment
+# What is our Problem?
+
+## Our Environment
+
+* We use Puppet
+* We use Git
+
+## Problem
+
+* After developing new puppet code, we need to test it
+* Testing production puppet involves both a client and
+  a server
+* We do not issue our volunteer developers their own
+  personal puppetmasters and we can't realistically
+  expect them to build their own
+* We want our developers to have the same (or similar)
+  flexibility with testing that they have with git
+  branching

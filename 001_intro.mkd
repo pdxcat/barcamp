@@ -1,0 +1,6 @@
+# Puppet Introduction
+
+* Configuration Management/Orchestration
+* Open Source, very Enterprise
+* Based in Portland, OR
+* Near and dear to our hearts
