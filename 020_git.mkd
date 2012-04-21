@@ -1,0 +1,3 @@
+2. Git
+    * Decentralized revision control system
+    * Power add-on and automation made easy via hooks

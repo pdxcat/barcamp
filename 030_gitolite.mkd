@@ -1,0 +1,18 @@
+1. Gitolite
+	* Wonderful git-infrastructure software package form sitramc
+	* https://github.com/sitaramc/gitolite
+	* GPL v2
+	* Whatever you want, you can haz w/ gitolite
+
+2. Gitolite vs Gitosis
+	* Gitolite provides very fine grain access
+	* Gitosis also does this, but gitolite goes further
+	* Gitolite provides branch-level access controls
+	* This allows some users to be able to push 
+	  to branches begining with test_$USERNAME
+	  but not to merge these changes into the production
+	  branch.
+	* This one little improvement opens up a whole ton of functionality
+	  when combined with dynamic puppet environments.
+	
+	

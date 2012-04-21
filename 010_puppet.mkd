@@ -1,0 +1,8 @@
+010. Puppet at 30,000 ft
+
+     * Uses the concept of Resource Abstraction Layer(RAL)
+     * Principle of ensuring state vs being reactionary
+     * Ruby-esque DSL (Price of admission)
+     * In Puppet configuration IS Code
+     * Distinguishes self from competitors such as Chef by the
+       Directed Asyncronous Graph (DAG)
